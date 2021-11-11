@@ -32,14 +32,14 @@
 				position: absolute;
 				top: 0;
 				left: 0;
-				width: 80px;
+				width: 120px;
 				z-index: 999;
 			}
 		</style>
 	</head>
 	<body onkeydown="btn(event)">
 		<div class="box" id="box">
-			<img src="materials/ico01.png" alt="" id="block">
+			<img src="materials/plane2.gif" alt="" id="block">
 			<ul id="list">
 				<li><img src="./materials/road.png" alt=""></li>
 				<li><img src="./materials/road.png" alt=""></li>
@@ -66,16 +66,16 @@
 				function btn(e){
 					if(e.keyCode == 37){ //左
 						var a = document.getElementById("block").style.left;
-						document.getElementById("block").style.left=Number(a.replace("px",""))-60+"px";
+						document.getElementById("block").style.left=Number(a.replace("px",""))-10+"px";
 					}else if(e.keyCode == 38){  //上
 						var a = document.getElementById("block").style.top;
-						document.getElementById("block").style.top=Number(a.replace("px",""))-60+"px";
+						document.getElementById("block").style.top=Number(a.replace("px",""))-10+"px";
 					}else if(e.keyCode == 39){  //右
 						var a = document.getElementById("block").style.left;
-						document.getElementById("block").style.left=Number(a.replace("px",""))+60+"px";
+						document.getElementById("block").style.left=Number(a.replace("px",""))+10+"px";
 					}else if(e.keyCode == 40){  //下
 						var a = document.getElementById("block").style.top;
-						document.getElementById("block").style.top=Number(a.replace("px",""))+60+"px";
+						document.getElementById("block").style.top=Number(a.replace("px",""))+10+"px";
 					}
 				}
 				
