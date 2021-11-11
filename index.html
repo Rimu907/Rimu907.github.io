@@ -14,49 +14,47 @@
 			.box{
 				width: 1000px;
 				height: 476px ;
-				border: 1px solid white;
+				border: 1px solid black;
 				margin: 50px auto;
 				overflow: hidden;
 			}
 			ul{
 				height: 476px;
-				width: 20000px;
+				width: 50000px;
 				position: relative;
 			}
 			ul li{
 				float: left;
+				
 			}
 		</style>
 	</head>
 	<body>
-		<div class="box" id="box"></div>
+		<div class="box" id="box">
 			<ul id="list">
 				<li><img src="./materials/road.png" alt=""></li>
 				<li><img src="./materials/road.png" alt=""></li>
 				<li><img src="./materials/road.png" alt=""></li>
 			</ul>
+		</div>
 			<script>
 				var box = document.getElementById('box');
 				var list = document.getElementById('list');
 				var left = 0;
-				list.innerHTML += list.innerHTML;
+				//list.innerHTML += list.innerHTML;
 				var time;
 				function move(){
 					time = setInterval(function(){
 						left -= 4;
-						if(left <= -12000){
+						if(left <= -4000){
 							left = 0;
 						}
 						list.style.left = left + 'px';
 					},20);
 				}
-				
-				box.onmouseenter = function(){
-					clearInterval(time);
-				}
-				box.onmouseleave = function(){
-					move();
-				}
+			
+				move();
+			
 				
 			</script>
 	</body>
