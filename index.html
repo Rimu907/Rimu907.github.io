@@ -29,14 +29,6 @@
 				
 			}
 			#block{
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 120px;
-				z-index: 999;
-			}
-		</style>
-	</head>
 	<body onkeydown="btn(event)">
 		<div class="box" id="box">
 			<img src="materials/plane2.gif" alt="" id="block">
@@ -65,6 +57,14 @@
 				move();
 				function btn(e){
 					if(e.keyCode == 37){ //左
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 120px;
+				z-index: 999;
+			}
+		</style>
+	</head>
 						var a = document.getElementById("block").style.left;
 						document.getElementById("block").style.left=Number(a.replace("px",""))-10+"px";
 					}else if(e.keyCode == 38){  //上
